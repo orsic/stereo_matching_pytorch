@@ -59,7 +59,6 @@ class Trainer(object):
                 for param_group in self.optimizer.param_groups:
                     print('LR: ', param_group['lr'], file=sys.stderr)
                 for i, example in enumerate(self.dataloader_train):
-                    break
                     self.optimizer.zero_grad()
                     self.set_learning_rate(epoch, self.lr_policy)
                     self.global_step += 1
